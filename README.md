@@ -6,14 +6,12 @@ Development kit for users to quickly and easily develop his Visualisation or Ana
 # Install - Data prepare - Start 
 ## Install
 
-$ git clone https://github.com/tavuong/covid19-datakit.git
-$ cd ~/Datacompression-KIT
-$ pip install cv2
-$ pip install matplotlib
-$ pip install mumpy
-$ pip install panda
-$ pip install workbook
-$ pip install openpyxl
+- $ git clone https://github.com/tavuong/covid19-datakit.git
+- $ cd ~/Datacompression-KIT
+- $ pip install cv2
+- $ pip install matplotlib
+- $ pip install mumpy
+- $ pip install panda, workbook,openpyxl
 
 ## Install with conda / Virtual Environment
 - Installation_PC.md
@@ -31,15 +29,15 @@ $ python codecKIT-vuong.py
     - block_process2 : block read, pocess and reconst
     - codec_dct      : demo  plug-in lib to block_procees: dvt_2, idct_2, lowpass_2d
 ## Data Structure
-input file is defined in config.py 
-output files are definde in config.py
-python codecKIT-vuong.py
+- input file is defined in config.py 
+- output files are definde in config.py
+- python codecKIT-vuong.py
 
-Input Block-length --> numberBlock
-Input 2D Lowpass length ---> nbit (Lowpass-example : Lowpass nbit * nbit of spectrals, rest set to o)
-blocks: ouput-folder with png-files for blocks
+- Input Block-length --> numberBlock
+- Input 2D Lowpass length ---> nbit (Lowpass-example : Lowpass nbit * nbit of spectrals, rest set to o)
+- blocks: ouput-folder with png-files for blocks
 
-modus P =Process        : Blocks generate, DCT and Idct to reconstruction:
+## modus P =Process        : Blocks generate, DCT and Idct to reconstruction:
                             - blocks/ images blocks (*.png)
                             - spect/  spect- blocks (*.png)
                             - filter/ filter- blocks (*.png)
@@ -52,11 +50,11 @@ modus P =Process        : Blocks generate, DCT and Idct to reconstruction:
                                       filterNN.jpg  filter of spec-blocks in ful-images
                                       reconNN.jpg reconstruction images
 
-modus G= Blocks         : Blocks generate
+## modus G= Blocks         : Blocks generate
                             - blocks/ images blocks (*.png)
                             img_out / movieori.gif file of blocks
 
-modus M= Mini Block in Image   : Blocks in big Image generate
+## modus M= Mini Block in Image   : Blocks in big Image generate
                                 - blocks/ images blocks (*.png) but mappinfg in big images
                                 img_out / movieori-map.gif file of blocks
 
