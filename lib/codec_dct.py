@@ -1,3 +1,4 @@
+# codec_dct.py
 from math import cos, pi, sqrt
 import numpy as np
 #-----------------------------------------------------------------------
@@ -42,8 +43,8 @@ def lowpass_2d (x,nbit=0):
 # 2d  Lowpass Filter
 # x: SpektralMatrix
 # nbit : Blocklänge des 2d Filter nbit*nbit 
-    retval = np.zeros_like(x)
-    map = np.zeros_like(x)    
+    retval = np.zeros_like(x).astype(float)
+    map = np.zeros_like(x).astype(float)    
     nmap2 = x.shape[0]
     nmap = nbit
 #    print ("nmap2=" + str(nmap2))

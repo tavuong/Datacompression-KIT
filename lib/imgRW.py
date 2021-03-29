@@ -1,3 +1,6 @@
+# imgRW.py
+# Datum : 29.03.2021
+# Author Dr.-Ing. The Anh Vuong 
 import cv2  # openCV
 import config
 from PIL import Image 

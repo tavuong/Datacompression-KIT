@@ -72,6 +72,7 @@ Development kit for Datacompression to quickly and easily develop his Visualisat
 [![N|](https://vuongblog.files.wordpress.com/2020/05/git_pt_vuong60.png)](https://vuongblog.wordpress.com)
 
 - Initiator: Dr.-Ing. The Anh Vuong (admin)
-- Entwickler Team: Dr. The Anh Vuong, Tim Rosenkranz
+- Author : Dr- Ing. The Anh Vuong
+- Constributor: Tim Rosenkranz
 
 License: MIT
