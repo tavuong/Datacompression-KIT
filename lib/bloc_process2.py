@@ -53,14 +53,11 @@ def imgBLOCK2(img, img2, numberBlock=0, param=0, nbit=0):
 #	precont1 = Block2D(imgReconful2,filename_save)
 #	precont1.save_image(2000)	
 
-	filename_save = config.dirImgout + '/spect-'
-	pspect = Block2D(imgSpectful,filename_save)
+	pspect = Block2D(imgSpectful)
 
-	filename_save = config.dirImgout + '/filter-'
-	pfilter = Block2D(imgFilterful,filename_save)
+	pfilter = Block2D(imgFilterful)
 
-	filename_save = config.dirImgout + '/reconst-'
-	precont = Block2D(imgReconful,filename_save)
+	precont = Block2D(imgReconful)
 
 	ncof = 0
 	ncof = int(nb * nb)
@@ -80,27 +77,28 @@ def imgBLOCK2(img, img2, numberBlock=0, param=0, nbit=0):
 			for i in range (nbI, nbI1):
 				for k in range (nbK, nbK1):
 					imageBlock[i-nbI][k-nbK]= img[i][k]
-			print ("Block calculated "+ str(nf) + "\r")
+#			print ("Block calculated "+ str(nf) + "\r")
 			filename_save = config.dirBlocks + '/block' 
-			ps = Block2D(imageBlock,filename_save)
-			ps.save_image(nf)	
+			ps = Block2D(imageBlock)
+			ps.print ("Block calculated "+ str(nf))
+			ps.save_image(nf,filename_save)	
 #-----------------Spectrum  -------------
 			imageSpect= ps.dct_2D ()
 			filename_save = config.dirSpect + '/spect' 
-			ps = Block2D(imageSpect,filename_save)
-			ps.save_image(nf)	
+			ps = Block2D(imageSpect)
+			ps.save_image(nf,filename_save)	
 
 #-----------------2D-Filter  -------------
 			imageFilter= ps.lowpass_2D(nmap)
 			filename_save = config.dirFilter + '/filter' 
-			ps = Block2D(imageFilter,filename_save)
-			ps.save_image(nf)	
+			ps = Block2D(imageFilter)
+			ps.save_image(nf,filename_save)	
 
 #-----------------IDCT   -------------
 			imageRecont= ps.idct_2D ()
 			filename_save = config.dirRecon + '/recon' 
-			ps = Block2D(imageRecont,filename_save)
-			ps.save_image(nf)
+			ps = Block2D(imageRecont)
+			ps.save_image(nf,filename_save)
 
 #---nf = Block index 
 			nf = nf  +1
@@ -130,16 +128,16 @@ def imgBLOCK2(img, img2, numberBlock=0, param=0, nbit=0):
 # ---- Save full immages
 
 	filename_save = config.dirImgout + '/spect-'
-	ps = Block2D(imgSpectful,filename_save)
-	ps.save_image_jpg(nf)
+	ps = Block2D(imgSpectful)
+	ps.save_image_jpg(nf,filename_save)
 
 	filename_save = config.dirImgout + '/filter-'
-	ps = Block2D(imgFilterful,filename_save)
-	ps.save_image_jpg(nf)
+	ps = Block2D(imgFilterful)
+	ps.save_image_jpg(nf,filename_save)
 
 	filename_save = config.dirImgout + '/reconst-'
-	ps = Block2D(imgReconful,filename_save)
-	ps.save_image_jpg(nf)
+	ps = Block2D(imgReconful)
+	ps.save_image_jpg(nf,filename_save)
 
 
 	ishow= imgSHOW2(nf)

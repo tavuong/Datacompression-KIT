@@ -1,14 +1,16 @@
 # CodecKIT.py
 # Frame Work für block-codierung 
 # Status: Entwicklung
-# Berechen Codierung eines Bilders aus JPEG mit OPencv
-# Der Vorgang wird analyse
-# Die Spektrum wird als Jpeg-Bilde rerzeugt!
-# Die Matrix des Spektrum wird:
-# - direckt in der Rechnung von Oroiginal -> Spectrum
-# - indirect aus der reconstruierte Bild 
-# Developer: Dr. -Ing. The Anh Vuong
-
+# Demo- für die Codierung eines Bilders aus JPEG mit OPencv
+# -Der Vorgang wird visulaisieren
+# -Die Spektrum wird berechnet 
+# -Die Matrix des Spektrum wird gefiltert, blockgrosse nbit
+# - Reconstruierte Bild wird berechent   
+# Alle Verarbeitungsschritten: Blocks, voll Bild als Jpg- file gepeichert, zu Visualisieren
+# Systolic Methode: block zu block weiter verschieben und bearbeitet.
+# Object Orientierte Programming 
+# Datum : 30.03.2021
+# Author Dr.-Ing. The Anh Vuong 
 # -*- coding: utf-8 -*-
 
 import cv2  # openCV
@@ -27,11 +29,13 @@ import sys
 
 # Parameter reading
 # Input Bilder BGR statt RGB
-numberModus = input("modus (P=Process, G=Blocks, M=BlockinImage, V=video, I=ImageCapture): ") 
+numberModus = input("modus (Return /P=Process, G=Blocks, M=BlockinImage, V=video, I=ImageCapture): ") 
 # for test param is set to 1
 # param = input ("Blockstoring? Yes=1 / no =0: ") 
 # param = int (param)
 param = 1
+if (numberModus == ""):
+    numberModus = "P"
 
 # Video Processing (in develop)
 if (numberModus in "V"):
