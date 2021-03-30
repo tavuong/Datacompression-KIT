@@ -6,7 +6,7 @@ Development kit for users to quickly and easily develop his Visualisation or Ana
 # Install - Data prepare - Start 
 ## Install
 
-- $ git clone https://github.com/tavuong/covid19-datakit.git
+- $ git clone https://github.com/tavuong/Datacompression-KIT.git
 - $ cd ~/Datacompression-KIT
 - $ pip install cv2
 - $ pip install matplotlib
