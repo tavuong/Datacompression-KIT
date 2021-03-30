@@ -31,6 +31,6 @@ Development kit for Datacompression to quickly and easily develop his Visualisat
 
 - Initiator: Dr.-Ing. The Anh Vuong (admin)
 - Author : Dr- Ing. The Anh Vuong
-- Constributor: Tim Rosenkranz
+- Constributor: Tim Rosenkranz and YOU ? (please make pull request)
 
 License: MIT
